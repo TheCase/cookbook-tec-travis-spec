@@ -7,4 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-log('... and we\'re done!')
+file '/tmp/test.txt' do
+  content 'test'
+  action :create
+end
