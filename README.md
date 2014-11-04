@@ -2,6 +2,8 @@
 
 TODO: Enter the cookbook description here.
 
+La la la!
+
 ## Supported Platforms
 
 TODO: List your supported platforms.
