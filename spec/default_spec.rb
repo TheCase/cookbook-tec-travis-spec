@@ -1,6 +1,8 @@
 require 'spec_helper'
 
-describe 'nagios::default' do
+describe 'cookbook::default' do
+  let(:chef_run) { ChefSpec::SoloRunner.converge(described_recipe) }
+
   before do
     stub_command('/usr/bin/php -v').and_return(true)
     stub_command('/usr/sbin/httpd -t').and_return(true)
