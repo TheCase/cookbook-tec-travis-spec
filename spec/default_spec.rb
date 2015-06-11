@@ -18,7 +18,7 @@ describe 'cookbook::default' do
   end
 
   it 'should include other recipe' do
-    expect(chef_run).to include_recipe('cookbook::other')
+    expect(chef_run).to include_recipe('cookbook::other_recipe')
   end
 
   it 'should start and enable service httpd' do
