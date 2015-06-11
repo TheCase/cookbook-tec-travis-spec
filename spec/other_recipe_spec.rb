@@ -6,4 +6,8 @@ describe 'cookbook::other_recipe' do
   before do
     stub_command('rpm -qa telnet').and_return(true)
   end
+
+  it 'package telnet installed' do
+    expect(chef_run).to install_package('telnet')
+  end
 end

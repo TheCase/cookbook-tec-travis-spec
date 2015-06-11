@@ -8,6 +8,11 @@ describe 'cookbook::default' do
     stub_command('/usr/sbin/httpd -t').and_return(true)
   end
 
+  it 'these packages should be installed' do
+    expect(chef_run).to install_package('httpd')
+    expect(chef_run).to install_package('php')
+  end
+
   it 'should create test file' do
     expect(chef_run).to render_file('/tmp/test.txt').with_content('test')
     expect(chef_run).to render_file('/tmp/test2.txt')
